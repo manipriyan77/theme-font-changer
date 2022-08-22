@@ -1,10 +1,9 @@
-import logo from "./logo.svg";
 import "./App.css";
-import { useState } from "react";
-import Myapp from "./component/Home/HomeBlog";
+import Myapp from "./component/Home/Home";
 
 function App() {
   const mainBody = document.body;
+
   const fontIncreaseHandler = () => {
     mainBody.classList.add("increase");
     mainBody.classList.remove("normal");
@@ -36,23 +35,25 @@ function App() {
   return (
     <div id="main">
       <div id="top-bar">
-        <button onClick={fontIncreaseHandler}>
+        <button className="font-increase" onClick={fontIncreaseHandler}>
           <span>A</span>
           <span>+</span>
         </button>
-        <button onClick={fontNormalHandler}>
+        <button className="font-normal" onClick={fontNormalHandler}>
           <span>A</span>
         </button>
-        <button onClick={fontDecreaseHandler}>
+        <button className="font-decrease" onClick={fontDecreaseHandler}>
           <span>A</span>
           <span>-</span>
         </button>
-        <button onClick={themeOneHandler}>T1</button>
-        <button onClick={themeTwoHandler}>T2</button>
+        <button className="theme-one" onClick={themeOneHandler}>
+          T1
+        </button>
+        <button className="theme-two" onClick={themeTwoHandler}>
+          T2
+        </button>
       </div>
-
       <Myapp />
-      {/* <HAbout /> */}
     </div>
   );
 }

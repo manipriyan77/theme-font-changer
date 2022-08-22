@@ -32,7 +32,45 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.font-decrease {
+  font-size: 14px;
+}
+
+.font-increase {
+  font-size: 18px;
+}
+
+.font-normal {
+  font-size: 16px;
+}
+
+.decrease #top-bar .font-decrease,
+.increase #top-bar .font-increase,
+.normal #top-bar .font-normal {
+  box-shadow: 2px 2px 2px 0px snow;
+  background-color: darkkhaki;
+}
+
+.font-decrease,
+.font-increase,
+.font-normal {
+  border: none;
+}
+
+.theme-one button.theme-one,
+.theme-two button.theme-two {
+  box-shadow: 2px 2px 2px 0px snow;
+  background-color: darkkhaki;
+  color: black;
+}
+
+button.theme-one,
+button.theme-two {
+  border: none;
 }
