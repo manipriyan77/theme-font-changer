@@ -1,9 +1,7 @@
-import logo from "./logo.svg";
-import "./App.css";
-import { useState } from "react";
-import Myapp from "./component/Home/HomeBlog";
+import "./Home.css";
+import Myapp from "./HomeBlog";
 
-function App() {
+const Home = () => {
   const mainBody = document.body;
   const fontIncreaseHandler = () => {
     mainBody.classList.add("increase");
@@ -42,10 +40,11 @@ function App() {
         </button>
         <button onClick={fontNormalHandler}>
           <span>A</span>
+          <span></span>
         </button>
         <button onClick={fontDecreaseHandler}>
           <span>A</span>
-          <span>-</span>
+          <span>+</span>
         </button>
         <button onClick={themeOneHandler}>T1</button>
         <button onClick={themeTwoHandler}>T2</button>
@@ -55,6 +54,6 @@ function App() {
       {/* <HAbout /> */}
     </div>
   );
-}
+};
 
-export default App;
+export default Home;
